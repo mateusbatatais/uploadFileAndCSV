@@ -1,5 +1,12 @@
+import NavMenu from "../../components/molecules/NavMenu";
+
 const Images = () => {
-  return <div>Images</div>;
+  return (
+    <>
+      <NavMenu />
+      <div className="container">images</div>
+    </>
+  );
 };
 
 export default Images;
