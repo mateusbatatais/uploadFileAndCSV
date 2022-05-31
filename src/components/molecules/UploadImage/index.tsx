@@ -9,7 +9,9 @@ const UploadImage = () => {
   const submit = (event: any) => {
     event.preventDefault();
     const newList = [...list];
-    newList.push(preview);
+    if (preview) {
+      newList.push(preview);
+    }
     setList(newList);
     localStorage.setItem("images", JSON.stringify(newList));
   };
