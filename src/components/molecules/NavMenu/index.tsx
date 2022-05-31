@@ -12,7 +12,7 @@ const NavMenu = () => {
         >
           <ul className="navbar-nav ">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/home">
+              <a className="nav-link" aria-current="page" href="/home">
                 Home
               </a>
             </li>

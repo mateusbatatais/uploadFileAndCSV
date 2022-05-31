@@ -1,37 +1,14 @@
 import NavMenu from "../../components/molecules/NavMenu";
+import UploadImage from "../../components/molecules/UploadImage";
+import UploadCSV from "../../components/molecules/UploadCSV";
 
 const Home = () => {
-  const submit = (event: any) => {};
-  const onChange = (e: any) => {};
   return (
     <>
       <NavMenu />
       <div className="container">
-        <form onSubmit={submit}>
-          <div className="mb-3">
-            <label className="form-label">Upload a image</label>
-            <input
-              className="form-control"
-              type="file"
-              id="formFile"
-              onChange={onChange}
-            />
-          </div>
-
-          <div className="mb-3">
-            <label className="form-label">Upload a CSV</label>
-            <input
-              className="form-control"
-              type="file"
-              id="formFile"
-              onChange={onChange}
-            />
-          </div>
-
-          <button type="submit" className="btn btn-primary">
-            SEND
-          </button>
-        </form>
+        <UploadImage />
+        <UploadCSV />
       </div>
     </>
   );
