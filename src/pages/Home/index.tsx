@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <NavMenu />
-      <div className="container pt-3">
+      <div className="container">
         <form onSubmit={submit}>
           <div className="mb-3">
             <label className="form-label">Upload a image</label>
