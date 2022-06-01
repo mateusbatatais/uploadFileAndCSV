@@ -52,7 +52,11 @@ const UploadImage = () => {
         <img src={preview} width="200" alt="preview" className="mb-3" />
       )}
 
-      <button type="submit" className="btn btn-primary d-flex">
+      <button
+        type="submit"
+        className="btn btn-primary d-flex"
+        disabled={!preview}
+      >
         SEND IMAGE
       </button>
       <Toast msg={msg} state={toast} type={type} />
