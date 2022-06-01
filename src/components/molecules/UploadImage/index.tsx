@@ -1,6 +1,6 @@
 import { useState } from "react";
 import getBase64 from "../../../utils/getBase64";
-import Toast from "../../atom/Image/Toast";
+import Toast from "../../atom/Toast";
 
 const UploadImage = () => {
   const initialValues = JSON.parse(localStorage.getItem("images") || "[]");
