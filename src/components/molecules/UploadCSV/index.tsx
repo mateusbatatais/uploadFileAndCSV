@@ -19,6 +19,7 @@ const UploadCSV = () => {
     setTimeout(() => {
       setToast(false);
     }, 3000);
+
     if (file) {
       Papa.parse(file, {
         header: true,

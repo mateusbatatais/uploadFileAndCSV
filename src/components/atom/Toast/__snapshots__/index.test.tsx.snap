@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toast component snapshot 1`] = `
+<div>
+  <div
+    class="alert mt-3 alert-success"
+    role="alert"
+  >
+    Text message
+  </div>
+</div>
+`;
