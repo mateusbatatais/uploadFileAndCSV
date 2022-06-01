@@ -53,7 +53,7 @@ const UploadImage = () => {
       )}
 
       <button type="submit" className="btn btn-primary d-flex">
-        SEND
+        SEND IMAGE
       </button>
       <Toast msg={msg} state={toast} type={type} />
     </form>
