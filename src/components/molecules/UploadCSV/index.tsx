@@ -84,11 +84,6 @@ const UploadCSV = () => {
       <button type="submit" className="btn btn-primary" disabled={!file}>
         SEND CSV
       </button>
-      {list.map((item: any, index: number) => (
-        <div key={index}>
-          File name: {item.name}, total itens: {item.data.length}
-        </div>
-      ))}
       <Toast msg={msg} state={toast} type={type} />
     </form>
   );
