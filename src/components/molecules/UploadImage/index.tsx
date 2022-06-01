@@ -1,19 +1,33 @@
 import { useState } from "react";
 import getBase64 from "../../../utils/getBase64";
+import Toast from "../../atom/Image/Toast";
 
 const UploadImage = () => {
   const initialValues = JSON.parse(localStorage.getItem("images") || "[]");
   const [preview, setPreview] = useState<any>();
   const [list, setList] = useState(initialValues || []);
+  const [toast, setToast] = useState(false);
+  const [type, setType] = useState("");
+  const [msg, setMsg] = useState("");
 
-  const submit = (event: any) => {
-    event.preventDefault();
+  const submit = (e: any) => {
+    e.preventDefault();
     const newList = [...list];
+    setToast(true);
+    setTimeout(() => {
+      setToast(false);
+    }, 3000);
+
     if (preview) {
       newList.push(preview);
+      setList(newList);
+      localStorage.setItem("images", JSON.stringify(newList));
+      setType("success");
+      setMsg("Image successfully added");
+    } else {
+      setType("warning");
+      setMsg("You need to add a image");
     }
-    setList(newList);
-    localStorage.setItem("images", JSON.stringify(newList));
   };
 
   const onChange = (e: any) => {
@@ -41,6 +55,7 @@ const UploadImage = () => {
       <button type="submit" className="btn btn-primary d-flex">
         SEND
       </button>
+      <Toast msg={msg} state={toast} type={type} />
     </form>
   );
 };
