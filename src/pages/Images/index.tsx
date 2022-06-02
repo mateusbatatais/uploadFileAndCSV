@@ -9,13 +9,8 @@ const Images = () => {
         <div className="row">
           {imgs.length ? (
             imgs.map((src: string) => (
-              <div className="col-6 col-sm-3">
-                <img
-                  key={src}
-                  src={src}
-                  alt="list itens"
-                  className="w-100 mb-3"
-                />
+              <div className="col-6 col-sm-3" key={src}>
+                <img src={src} alt="list itens" className="w-100 mb-3" />
               </div>
             ))
           ) : (

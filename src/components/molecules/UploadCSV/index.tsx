@@ -5,7 +5,7 @@ import Papa from "papaparse";
 const UploadCSV = () => {
   const initialValues = JSON.parse(localStorage.getItem("csv") || "[]");
   const [file, setFile] = useState<any>();
-  const [list, setList] = useState(initialValues || []);
+  const [list, setList] = useState(initialValues);
 
   const [toast, setToast] = useState(false);
   const [type, setType] = useState("");
